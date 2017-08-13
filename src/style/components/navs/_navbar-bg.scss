@@ -1,0 +1,11 @@
+/*-----------------------------------------------*/
+@media screen and (max-width: $screen-sm - 1) {
+    .navbar-bg {
+        @include position-fixed($top:0,$right:0,$bottom:0);
+        background: $color-black-lt;
+        width: 0;
+        overflow: hidden;
+        z-index: 2;
+        transition: 0.5s;
+    }
+}

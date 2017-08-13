@@ -1,0 +1,9 @@
+.header {
+    @include clearfix();
+    padding-top: $gutter;
+    position: relative;
+
+    .contact {
+        margin-bottom: 25px;
+    }
+}

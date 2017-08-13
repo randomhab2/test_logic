@@ -1,0 +1,25 @@
+.main {
+    .main__center {
+        @include position-absolute($left:0, $right:0);
+        text-align: center;
+
+        .caption {
+            margin: 0 0 40px 0;
+
+            &__line {
+                display: block;
+            }
+        }
+    }
+}
+
+/*-----------------------------------------------*/
+@media screen and (min-width: $screen-sm) {
+    .main {
+        .main__center {
+            .caption__line {
+                display: inline-block;
+            }
+        }
+    }
+}

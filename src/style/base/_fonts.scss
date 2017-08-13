@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+/*------------- sizes ---------------*/
+$font-lg:      16px;
+$font-base:    14px;
+
+/*------------- headings ---------------*/
+$font-h1:      30px;
+$font-h1-mob:  24px;
+
+/*------------- styles ---------------*/
+$font-lato: 'Lato', sans-serif;
+
+/*------------- mixins ---------------*/
+@mixin lato-regular() {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+}
+
+@mixin lato-bold() {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+

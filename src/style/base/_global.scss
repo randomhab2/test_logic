@@ -1,0 +1,52 @@
+body, html {
+    @include size(100%,100%);
+}
+
+body {
+    font: $font-base $font-lato;
+    font-weight: normal;
+    color: $color-black;
+    font-size: $font-base;
+    min-width: 320px;
+    position: relative;
+}
+
+h1, .h1 {
+    @include lato-bold();
+    font-size: $font-h1-mob;
+    color: $color-white;
+    text-transform: uppercase;
+}
+
+a {
+    color: $color-yellow;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/*-----------------------------------------------*/
+@media screen and (min-width: $screen-sm) {
+    h1, .h1 {
+        font-size: $font-h1;
+    }
+}
+
+/*----------------- features ------------------*/
+.table-view {
+    display: table;
+    width: 100%;
+
+    .table__cell {
+        display: table-cell;
+
+        &--bottom {
+            vertical-align: bottom;
+        }
+    }
+}
+
+.text-right {text-align: right;}
+.text-center {text-align: center;}

@@ -1,0 +1,5 @@
+.ccontent-background {
+    @include background('../img/background.jpg');
+    @include position-absolute(0,0,0,0);
+    z-index: -1;
+}

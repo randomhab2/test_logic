@@ -1,0 +1,60 @@
+/*-----------------------------------------------*/
+@media screen and (max-width: $screen-sm - 1) {
+    .nav-btn {
+        @include position-absolute($right: 30px, $bottom:0);
+        @include size(30px, 30px);
+        @include rotate(0);
+        @include transition(.5s ease-in-out);
+        cursor: pointer;
+        z-index: 9;
+
+        &__inner {
+            @include position-absolute($left:0);
+            @include size(100%, 4px);
+            @include opacity(1);
+            @include rotate(0);
+            @include transition(.3s ease-in-out);
+            background: $color-white;
+            display: block;
+
+            &:nth-child(1) {
+                top: 0;
+            }
+
+            &:nth-child(2),
+            &:nth-child(3) {
+                top: 10px;
+            }
+
+            &:nth-child(4) {
+                top: 20px;
+            }
+
+        }
+
+        &.open {
+            .nav-btn__inner {
+                &:nth-child(1) {
+                    top: 10px;
+                    width: 0;
+                    left: 50%;
+                }
+
+                &:nth-child(2) {
+                    @include rotate(45);
+                }
+
+                &:nth-child(3) {
+                    @include rotate(-45);
+                }
+
+                &:nth-child(4) {
+                    top: 18px;
+                    width: 0;
+                    left: 50%;
+                }
+
+            }
+        }
+    }
+}

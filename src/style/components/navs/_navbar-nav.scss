@@ -1,0 +1,50 @@
+.navbar-nav {
+    .navbar-nav__item {
+        display: block;
+        margin-top: 20px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+    }
+
+    .navbar-nav__link {
+        @include lato-bold();
+        text-transform: uppercase;
+        color: $color-white;
+    }
+}
+
+/*-----------------------------------------------*/
+@media screen and (min-width: $screen-sm) {
+    .navbar-nav {
+        @include clearfix();
+
+        .navbar-nav__item {
+            display: inline-block;
+            margin-left: 25px;
+            position: relative;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:hover {
+                .nav {
+                    @include opacity(1);
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+/*-----------------------------------------------*/
+@media screen and (max-width: $screen-sm - 1) {
+    .navbar-nav {
+        @include position-absolute($top: 50%, $right: 0);
+        @include translate(0, -50%);
+        padding: 30px;
+    }
+}
